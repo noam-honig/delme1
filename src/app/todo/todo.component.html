@@ -1,5 +1,5 @@
 <input [(ngModel)]="newTaskTitle">
-<button (click)="addTask()">Add Task</button>
+<button (click)="addTask()" *ngIf="newTaskTitle">Add Task</button>
 <p>
     Task: {{newTaskTitle}}
 </p>
