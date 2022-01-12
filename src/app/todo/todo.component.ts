@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  newTaskTitle: string = 'Task a';
+  newTaskTitle: string = 'New Task';
   constructor() { }
   tasks: Task[] = [
     { title: "Task a" },
@@ -15,6 +15,10 @@ export class TodoComponent implements OnInit {
     { title: "Task c" }
   ];
   ngOnInit(): void {
+  }
+  addTask() {
+    this.tasks.push({ title: this.newTaskTitle });
+    this.newTaskTitle = '';
   }
 }
 interface Task {
